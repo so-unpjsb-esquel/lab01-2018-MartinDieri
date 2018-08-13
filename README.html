@@ -1,30 +1,426 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html>
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>README</title>
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.line-block{white-space: pre-line;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
-  </style>
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #008080;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #d14;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #009926;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #990073;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0086b3;
+}
+
+.hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
 </head>
 <body>
-<h1 id="laboratorio-1---el-lenguaje-c">Laboratorio 1 - El lenguaje C</h1>
-<p>El objetivo de este primer Laboratorio es familiarizarse con las herramientas de desarrollo y repasar el uso del lenguaje C.</p>
-<h2 id="ejercicio-1">Ejercicio 1</h2>
+<h1 id="laboratorio-1">Laboratorio 1</h1>
+<h2 id="parte-1---el-lenguaje-de-programaci%C3%B3n-c">Parte 1 - El Lenguaje de Programación C</h2>
+<p>El objetivo de la primer parte del Laboratorio es familiarizarse con las herramientas de desarrollo y repasar el uso del lenguaje C.</p>
+<h3 id="ejercicio-1">Ejercicio 1</h3>
 <p>Modificar el programa <code>ej1.c</code> para que realize la suma de un número arbitrario de números enteros, que son provistos desde la línea de comandos como argumentos. Por ejemplo:</p>
-<pre><code>$ sumatoria 1 2 3 5 8
+<pre class="hljs"><code><div>$ sumatoria 1 2 3 5 8
 19
-</code></pre>
-<h2 id="ejercicio-2">Ejercicio 2</h2>
+</div></code></pre>
+<h3 id="ejercicio-2">Ejercicio 2</h3>
 <p>Repasar el primer capítulo de libro &quot;El Lenguaje de Programación C&quot; (W. Kernighan y D. Ritchie, Prentice Hall) y realizar los siguientes ejercicios del Capítulo 1:</p>
 <ul>
 <li>1.4</li>
@@ -32,7 +428,7 @@
 <li>1.12</li>
 <li>1.13</li>
 </ul>
-<h2 id="ejercicio-3">Ejercicio 3</h2>
+<h3 id="ejercicio-3">Ejercicio 3</h3>
 <p>Repasar los siguientes capitulos del libro &quot;El Lenguaje de Programación C&quot;:</p>
 <ul>
 <li>2.9 (Operadores para manejo de bits).</li>
@@ -44,7 +440,67 @@
 <li>2.6</li>
 <li>5.3</li>
 </ul>
-<hr />
+<h2 id="parte-2---llamadas-al-sistema">Parte 2 - Llamadas al Sistema</h2>
+<h3 id="preliminares">Preliminares</h3>
+<p>Leer el Capítulo 3, especialmente la seccion <em>Code: C trap handler</em>, del libro de referencia de <em>xv6</em>, para los ejercicios 6 y 7.</p>
+<p>Este es el primer Laboratorio en que utilizaremos <em>xv6</em>. Este es un sistema operativo pequeño, de tipo Unix, que fue desarrollado con fines educativos. Lo ejecutaremos en una máquina virtual mediante QEMU, con el comando <code>make qemu</code> o <code>make qemu-nox</code>. Con el último comando, no se abre una ventana nueva que emula una monitor de PC, si no que utiliza la misma terminal desde la cual se ejecutó el comando.</p>
+<p>Para instalar QEMU, utilizar el administrador de paquetes de la distribución de Linux que estén utilizando. Por ejemplo en Ubuntu:</p>
+<pre class="hljs"><code><div>$ sudo apt install qemu
+</div></code></pre>
+<h3 id="clonar-el-repositorio-de-xv6">Clonar el repositorio de <em>xv6</em></h3>
+<p>Para clonar el repositorio de <em>xv6</em>:</p>
+<pre class="hljs"><code><div>$ git clone git@github.com:so-unpjsb-esquel/xv6-2018-alumno.git
+</div></code></pre>
+<p>Donde <code>alumno</code> tienen que reemplazarlo por su nombre de usuario en GitHub. El comando va a decargar su copia de <em>xv6</em> en el directorio <em>xv6-2018-alumno</em> en el directorio donde ejecuten el comando.</p>
+<p>Luego, para probar que el sistema operativo se compile y ejecute correctamente:</p>
+<pre class="hljs"><code><div>$ cd xv6-2018-alumno
+$ make qemu
+</div></code></pre>
+<p><em>Curiosidad</em>: Si tienen Windows y ejecutan Linux dentro de una máquina virtual en VirtualBox, y luego <em>xv6</em> con QEMU dentro de ese Linux... es como un <em>Inception</em> de VMs.</p>
+<h2 id="ejercicio-4">Ejercicio 4</h2>
+<p>Compilar el programa <code>hola.c</code>, que imprime el mensaje <code>hola mundo</code> en la <em>salida estándar</em>. Ejecutarlo utilizando el comando <code>strace</code>, para ver que llamadas al sistema utiliza el programa. Responder:</p>
+<ol>
+<li>Identificar las llamadas al sistema utilizadas por las funciones de biblioteca empleadas en el programa.</li>
+<li>¿Qué llamada al sistema se encarga de imprimir el mensaje en la <em>salida estándar</em>?</li>
+</ol>
+<p>Poner las respuestas en un archivo de texto titulado <code>ej4.txt</code> en el repositorio (no olvidar realizar el <code>push</code> para subir los cambios a GitHub).</p>
+<p><em>Nota</em>: es posible que el comando <code>strace</code> no este instalado en el sistema. De ser así, utilizar el administrador de paquetes de la distribución para instalarlo. Por ejemplo, en Ubuntu el comando es <code>sudo apt install strace</code>.</p>
+<h2 id="ejercicio-5">Ejercicio 5</h2>
+<p>Completar los programas <code>reader.c</code> y <code>writer.c</code>. El programa <code>reader.c</code> debe leer líneas desde la <em>entrada estándar</em> y enviarlas al programa <code>writer.c</code> para que este las imprima a través de la <em>salida estándar</em>. La comunicación entre los dos procesos debe realizarse mediante una <em>tubería</em> (<em>pipe</em>), creada con la llamada al sistema <a href="http://man7.org/linux/man-pages/man3/mkfifo.3.html"><code>mkfifo()</code></a> en <code>reader.c</code>. En el programa <code>writer.c</code> utilizar la llamada al sistema <a href="http://man7.org/linux/man-pages/man2/open.2.html"><code>open()</code></a> para abrir la tubería. Emplear las llamadas al sistema <a href="http://man7.org/linux/man-pages/man2/read.2.html"><code>read()</code></a>, para leer desde la <em>entrada estandar</em>, y <a href="http://man7.org/linux/man-pages/man2/write.2.html"><code>write()</code></a> para escribir en la <em>salida estándar</em>. El programa <code>reader.c</code> debe finalizar su ejecución al leer una línea en blanco (esto es, una línea que solo contenga el carácter <code>\n</code>).</p>
+<h2 id="ejercicio-6">Ejercicio 6</h2>
+<p>En este ejercicio, se modificara el <em>kernel</em> de <em>xv6</em> para que imprima un mensaje cada vez que un programa invoca una llamada al sistema. En este mensaje se indicará el nombre de la llamada al sistema ejecutada, y el valor que la misma retorna.</p>
+<p>Para esto, se debe modificar la función <code>syscall()</code> en el archivo <code>syscall.c</code>. Esta función es ejecutada por el sistema operativo cuando se detecta que una interrupción por software ha sido generada desde un proceso de usuario para requerir algún tipo servicio. En otras palabras, para poder ejecutar una llamada al sistema.</p>
+<p>Una vez hecha la modificación, al compilar y ejecutar <em>xv6</em> en QEMU se tendría que ver algo similar a esto:</p>
+<pre class="hljs"><code><div>xv6...
+cpu1: starting
+cpu0: starting
+sys_fstat -&gt; 0
+sys_write -&gt; -1
+...
+sys_write -&gt; 1
+sys_fork -&gt; 2
+sys_exec -&gt; 0
+sys_open -&gt; 3
+sys_close -&gt; 0
+$sys_write -&gt; 1
+ sys_write -&gt; 1
+</div></code></pre>
+<p>Las últimas lineas muestran como el proceso <code>init</code> crea y ejecuta el programa <code>sh</code> (el interprete de comandos), y luego <code>sh</code> escribiendo el símbol <code>$</code> (el <em>prompt</em> o símbolo de sistema).</p>
+<h3 id="entrega">Entrega:</h3>
+<p>Agregar en el directorio del Laboratorio:</p>
+<ul>
+<li>Una copia del archivo <code>syscall.c</code> modificado (ejecutar <code>git add syscall.c</code> para agregarlo al <em>commit</em>).</li>
+<li>Un archivo de texto donde este el resultado de ejecutar el comando <code>echo hola</code>, y se explique brevemente para que se invocan las llamadas al sistema utilizadas.</li>
+</ul>
+<h2 id="ejercicio-7">Ejercicio 7</h2>
+<p>Este ejercicio vamos a modificar nuevamente el <em>kernel</em> de a <em>xv6</em>, para agregar una nueva llamada al sistema operativo que retorne al usuario la fecha UTC actual del sistema.</p>
+<p>Para facilitar la implementación, utilizar como base el código fuente de una llamada al sistema ya existente, como por ejemplo <code>uptime()</code>.</p>
+<p>Para leer el reloj del sistema y obtener la fecha UTC, hay que usar la función auxiliar <code>cmostime()</code>, implementada en el archivo <code>lapic.c</code>. Esta función requiere como parámetro un puntero a una estructura <code>struct rtcdate</code>, definida en el archivo <code>date.h</code>.</p>
+<p>Para probar la nueva llamada al sistema, usar el archivo <code>date.c</code> como base para un programa que invoca la llamada al sistema e imprime por la salida estándar la fecha UTC. Se debe agregar <code>date.c</code> a la lista  <code>UPROGS</code> del <code>Makefile</code> de <em>xv6</em> para que sea compilado como un programa de usuario.</p>
+<h3 id="entrega">Entrega</h3>
+<p>Agregar en el directorio del Laboratorio un archivo de texto donde se explique brevemente las modificaciones realizadas en cada uno de los archivos de <em>xv6</em> que hayan modificado. Recordar utilizar <code>git add</code> para que Git agregue este archivo en el <em>commit</em>.</p>
+<hr>
 <p>¡Fín del Laboratorio 1!</p>
+
 </body>
 </html>
