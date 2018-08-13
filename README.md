@@ -56,9 +56,11 @@ $ make qemu
 _Curiosidad_: Si tienen Windows y ejecutan Linux dentro de una máquina virtual en VirtualBox, y luego _xv6_ con QEMU dentro de ese Linux... es como un _Inception_ de VMs.
 
 ## Ejercicio 4
-Compilar el programa `hola.c`, que imprime el mensaje `hola mundo` en la _salida estándar_. Ejecutar el ejecutable utilizando el comando `strace`, para ver que llamadas al sistema utiliza el programa. Responder:
+Compilar el programa `hola.c`, que imprime el mensaje `hola mundo` en la _salida estándar_. Ejecutarlo utilizando el comando `strace`, para ver que llamadas al sistema utiliza el programa. Responder:
 1. Identificar las llamadas al sistema utilizadas por las funciones de biblioteca empleadas en el programa.
 2. ¿Qué llamada al sistema se encarga de imprimir el mensaje en la _salida estándar_?
+
+Poner las respuestas en un archivo de texto titulado `ej4.txt` en el repositorio (no olvidar realizar el `push` para subir los cambios a GitHub).
 
 _Nota_: es posible que el comando `strace` no este instalado en el sistema. De ser así, utilizar el administrador de paquetes de la distribución para instalarlo. Por ejemplo, en Ubuntu el comando es `sudo apt install strace`.
 
