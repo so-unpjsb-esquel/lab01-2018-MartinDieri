@@ -31,7 +31,7 @@ Y realizar los siguientes ejercicios de los Capítulos 2 y 5:
 ## Parte 2 - Llamadas al Sistema
 
 ### Preliminares
-Leer el Capítulo 3, especialmente la seccion _Code: C trap handler_, del libro de referencia de _xv6_, para los ejercicios 3 y 4.
+Leer el Capítulo 3, especialmente la seccion _Code: C trap handler_, del libro de referencia de _xv6_, para los ejercicios 6 y 7.
 
 Este es el primer Laboratorio en que utilizaremos _xv6_. Este es un sistema operativo pequeño, de tipo Unix, que fue desarrollado con fines educativos. Lo ejecutaremos en una máquina virtual mediante QEMU, con el comando `make qemu` o `make qemu-nox`. Con el último comando, no se abre una ventana nueva que emula una monitor de PC, si no que utiliza la misma terminal desde la cual se ejecutó el comando.
 
